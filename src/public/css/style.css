@@ -1,0 +1,157 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilos para las tarjetas de producto y formularios */
+ul, form {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilos para cada tarjeta de producto */
+li {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajuste para que la última tarjeta de cada fila no tenga margen derecho */
+li:nth-child(3n) {
+    margin-right: 0;
+}
+
+/* Estilos para los contenidos dentro de las tarjetas */
+h2 {
+    color: #000000; /* Negro Pintier */
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 0.85em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Estilos para ID, código, stock y precio */
+.id-code-stock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+.id-code-stock p {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fcb900; /* Amarillo Pintier */
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Estilos para el formulario */
+form {
+    max-width: 100%;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Color de fondo Pintier */
+    color: #333;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Estilos para botones */
+button {
+    background-color: #000000; /* Negro Pintier */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #333333; /* Negro más oscuro Pintier */
+}
+
+/* Estilos para el contenedor de productos */
+#contenedorProductos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribuye las tarjetas de forma equitativa */
+    margin-top: 20px;
+}
+
+/* Estilos para las tarjetas de productos dentro de #contenedorProductos */
+#contenedorProductos .card {
+    width: calc(33.33% - 20px); /* Calculamos el 33.33% del ancho menos los márgenes */
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Ajuste para que las tarjetas de producto tengan el mismo ancho */
+#contenedorProductos .card:nth-child(3n) {
+    margin-right: 0;
+}

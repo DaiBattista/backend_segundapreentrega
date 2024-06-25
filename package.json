@@ -1,0 +1,27 @@
+{
+  "name": "segunda_preentrega",
+  "version": "1.0.0",
+  "description": "Segunda Preentrega backend",
+  "main": "src/app.js",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "keywords": [
+    "segunda",
+    "preentrega",
+    "backend",
+    "express"
+  ],
+  "author": "Daiana Battista",
+  "license": "MIT",
+"type": "module",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "socket.io": "^4.4.1"
+  }
+}

@@ -1,0 +1,25 @@
+<body>
+    <h1>Formulario para agregar productos</h1>
+    <form>
+        <input type="text" id="title" placeholder="Título">
+        <input type="text" id="description" placeholder="Descripción">
+        <input type="number" id="price" placeholder="Precio">
+        <input type="text" id="img" placeholder="Sin imágen">
+        <input type="text" id="code" placeholder="Código">
+        <input type="number" id="stock" placeholder="Stock">
+        <input type="text" id="id" placeholder="Id">
+        <select id="status">
+            <option value="true">Activo</option>
+            <option value="false">Inactivo</option>
+        </select>
+        <button type="button" id="btnSend">Enviar</button>
+    </form>
+
+    <h1>Listado de productos</h1>
+    <div id="contenedorProductos" class="container">
+        <div class="card"></div>
+    </div>
+</body>
+
+<script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+<script src="js/main.js"></script>
