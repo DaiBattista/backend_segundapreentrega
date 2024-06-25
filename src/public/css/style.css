@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -9,7 +8,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* Estilos para las tarjetas de producto y formularios */
 ul, form {
     list-style-type: none;
     padding: 0;
@@ -18,7 +16,6 @@ ul, form {
     flex-wrap: wrap;
 }
 
-/* Estilos para cada tarjeta de producto */
 li {
     background-color: #ffffff;
     border: 1px solid #ccc;
@@ -32,14 +29,12 @@ li {
     flex-direction: column;
 }
 
-/* Ajuste para que la última tarjeta de cada fila no tenga margen derecho */
 li:nth-child(3n) {
     margin-right: 0;
 }
 
-/* Estilos para los contenidos dentro de las tarjetas */
 h2 {
-    color: #000000; /* Negro Pintier */
+    color: #000000; 
     margin-bottom: 10px;
     font-size: 1.4em;
 }
@@ -57,7 +52,6 @@ img {
     border-radius: 5px;
 }
 
-/* Estilos para ID, código, stock y precio */
 .id-code-stock {
     display: flex;
     justify-content: space-between;
@@ -74,12 +68,11 @@ img {
 .precio {
     font-size: 18px;
     font-weight: bold;
-    color: #fcb900; /* Amarillo Pintier */
+    color: #fcb900; 
     text-align: center;
     margin-top: auto;
 }
 
-/* Estilos para el formulario */
 form {
     max-width: 100%;
     margin: 10px auto;
@@ -107,7 +100,7 @@ select {
     border-radius: 3px;
     font-size: 14px;
     box-sizing: border-box;
-    background-color: #f9f9f9; /* Color de fondo Pintier */
+    background-color: #f9f9f9; 
     color: #333;
 }
 
@@ -117,9 +110,8 @@ select {
     appearance: none;
 }
 
-/* Estilos para botones */
 button {
-    background-color: #000000; /* Negro Pintier */
+    background-color: #000000; 
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -129,20 +121,18 @@ button {
 }
 
 button:hover {
-    background-color: #333333; /* Negro más oscuro Pintier */
+    background-color: #333333; 
 }
 
-/* Estilos para el contenedor de productos */
 #contenedorProductos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Distribuye las tarjetas de forma equitativa */
+    justify-content: space-around; 
     margin-top: 20px;
 }
 
-/* Estilos para las tarjetas de productos dentro de #contenedorProductos */
 #contenedorProductos .card {
-    width: calc(33.33% - 20px); /* Calculamos el 33.33% del ancho menos los márgenes */
+    width: calc(33.33% - 20px); 
     margin-bottom: 40px;
     background-color: #ffffff;
     border: 1px solid #ccc;
@@ -151,7 +141,6 @@ button:hover {
     box-sizing: border-box;
 }
 
-/* Ajuste para que las tarjetas de producto tengan el mismo ancho */
 #contenedorProductos .card:nth-child(3n) {
     margin-right: 0;
 }

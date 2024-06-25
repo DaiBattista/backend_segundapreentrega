@@ -2,7 +2,7 @@ import express from "express";
 import { engine } from 'express-handlebars';
 import { Server } from "socket.io";
 import cartsRouter from "../src/routers/cartsrouter.js";
-import productsRouter from "../src/routers/productsrouter.js"; 
+import productsRouter from "../src/routers/productsrouter.js";
 import indexRouter from "../src/routers/indexrouter.js";
 
 const app = express();
@@ -19,8 +19,8 @@ app.set("view engine", "handlebars");
 app.set("views", "./src/views");
 
 // Rutas
-app.use("/", indexRouter); 
-app.use("/api/carts", cartsRouter); 
+app.use("/", indexRouter);
+app.use("/api/carts", cartsRouter);
 app.use("/api/products", productsRouter);
 
 const httpServer = app.listen(PUERTO, () => {

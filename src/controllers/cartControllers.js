@@ -2,7 +2,6 @@ import fs from "fs";
 
 const cartsFilePath = "./src/models/carts.json";
 
-// Función para guardar los datos de los carritos en el archivo JSON
 function saveCarts(carts) {
     fs.writeFile(cartsFilePath, JSON.stringify(carts, null, 2), (err) => {
         if (err) {
@@ -13,7 +12,6 @@ function saveCarts(carts) {
     });
 }
 
-// Obtener todos los carritos
 export const getAllCarts = (req, res) => {
     try {
         const cartsData = fs.readFileSync(cartsFilePath, "utf-8");
@@ -25,11 +23,9 @@ export const getAllCarts = (req, res) => {
     }
 };
 
-// Crear un nuevo carrito
 export const createCart = (req, res) => {
 };
 
-// Obtener un carrito por ID
 export const getCartById = (req, res) => {
     const cartId = req.params.cid;
     try {
@@ -48,7 +44,6 @@ export const getCartById = (req, res) => {
     }
 };
 
-// Agregar un producto a un carrito
 export const addProductToCart = (req, res) => {
     const cartId = req.params.cid;
     const productId = req.params.pid;
@@ -64,18 +59,14 @@ export const addProductToCart = (req, res) => {
             return res.status(404).json({ message: `El carrito con ID ${cartId} no existe` });
         }
 
-        // Verifica si el producto ya está en el carrito
         const existingProduct = carts[cartIndex].products.find((product) => product.id === productId);
 
         if (!existingProduct) {
-            // Si el producto no existe en el carrito, agregarlo
             carts[cartIndex].products.push({ id: productId, quantity });
         } else {
-            // Si el producto ya está en el carrito, incrementar la cantidad
             existingProduct.quantity += quantity;
         }
 
-        // Guardar los cambios en el archivo JSON
         saveCarts(carts);
 
         res.json(carts[cartIndex]);
